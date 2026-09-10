@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+```
+<style>
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 30px auto;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 12px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    h1 {
+        text-align: center;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<h1>Student Dashboard</h1>
+
+<table>
+
+    
+
+    <tbody>
+
+        {% for student in students %}
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.address }}</td>
+            <td>{{ student.email }}</td>
+        </tr>
+
+        
+    
+        {% empty %}
+        <h2>no students data</h2>
+        
+        
+
+        {% endfor %}
+        
+        
+
+
+    </tbody>
+
+</table>
+```
+
+</body>
+</html>
